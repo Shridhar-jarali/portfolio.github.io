@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Outcomes</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(200,200,200);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(100,100,100);
+            padding: 20px;
+            background-color: rgb(180,180,180);
+            margin: 0;
+            border-bottom: 4px solid rgb(100,100,100);
+        }
+        h2 {
+            color: rgb(100,100,100);
+            background-color:rgb(140,140,140);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: rgb(100,100,100);
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        p, ul {
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+        ul {
+            list-style-type: square;
+        }
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgb(180,180,180);
+            border-radius: 8px;
+            max-width: 1100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        strong {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+            p, ul {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+            section {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Learning Outcomes</h1>
+
+    <section>
+        <h2>Designing and Analyzing Algorithms</h2>
+        
+        <h3>1. Algorithmic Problem-Solving Strategies</h3>
+        <ul>
+            <li><strong>Recursion:</strong> Break down problems into smaller subproblems that are of the same type, and solve them recursively. Examples include the Fibonacci sequence, Tower of Hanoi, and Tree Traversals.</li>
+            <li><strong>Backtracking:</strong> A trial-and-error approach where you incrementally build a solution, backtracking when a path is found to be invalid. Classic problems include the N-Queens problem, Sudoku solver, and Subset Sum problem.</li>
+            <li><strong>Brute Force:</strong> A straightforward approach where all possible solutions are checked without any optimization. Example: Finding all pairs in an array that sum to a target value.</li>
+        </ul>
+        
+        <h3>2. Efficiency in Algorithms</h3>
+        <ul>
+            <li><strong>Time Complexity:</strong> Analyze the number of operations or steps an algorithm takes relative to the input size. Common notations include Big-O (for worst case), Big-Ω (for best case), and Big-Θ (for average case).</li>
+            <li><strong>Space Complexity:</strong> Evaluate the amount of memory an algorithm requires during its execution. This is especially important for handling large datasets or constrained environments.</li>
+            <li><strong>Optimization:</strong> Strive for algorithms that minimize both time and space complexity. Efficient algorithms are critical for handling larger datasets in real-world applications.</li>
+        </ul>
+        
+        <h3>3. Essential Data Structures</h3>
+        <ul>
+            <li><strong>Trees:</strong> Store hierarchical data in structures like Binary Search Trees (BST) and AVL Trees. These are crucial for efficient searching, insertion, and deletion operations.</li>
+            <li><strong>Graphs:</strong> Use nodes and edges to represent relationships and solve problems related to connectivity, paths, and cycles. Graphs are foundational in areas like networking, social networks, and routing algorithms.</li>
+            <li><strong>Hash Tables:</strong> Store key-value pairs to allow for average constant-time lookups, insertions, and deletions. Hashing is widely used in problems like caching and counting frequencies.</li>
+            <li><strong>Tries:</strong> Specialized tree structures used for fast string search operations, ideal for applications like autocomplete and spell checking.</li>
+            <li><strong>Heaps:</strong> Efficiently implement priority queues with operations like insertion, deletion, and access to the minimum or maximum element in logarithmic time. Example: Dijkstra’s Algorithm.</li>
+        </ul>
+        
+        <h3>4. Graph Algorithms</h3>
+        <ul>
+            <li><strong>Depth-First Search (DFS):</strong> Explore as deep as possible down one path before backtracking. DFS is useful for problems like topological sorting, detecting cycles, and finding strongly connected components.</li>
+            <li><strong>Breadth-First Search (BFS):</strong> Explore all nodes at the current level before moving deeper. BFS is commonly used for shortest-path algorithms, level-order tree traversal, and finding connected components in a graph.</li>
+            <li><strong>Shortest Path Algorithms:</strong> Find the shortest path between nodes in a graph. Common algorithms include:
+                <ul>
+                    <li><strong>Dijkstra’s Algorithm:</strong> Efficient for graphs with non-negative edge weights.</li>
+                    <li><strong>Bellman-Ford Algorithm:</strong> Can handle graphs with negative edge weights and detect negative weight cycles.</li>
+                    <li><strong>Floyd-Warshall Algorithm:</strong> Computes the shortest paths between all pairs of nodes in a graph.</li>
+                </ul>
+            </li>
+            <li><strong>Minimum Spanning Tree (MST):</strong> Connect all nodes in a graph with the least total weight, using algorithms such as Kruskal’s or Prim’s.</li>
+        </ul>
+        
+        <h3>5. Sorting and Searching</h3>
+        <ul>
+            <li><strong>Sorting Algorithms:</strong> Order data efficiently using algorithms like:
+                <ul>
+                    <li><strong>Merge Sort:</strong> A stable, divide-and-conquer algorithm with O(n log n) time complexity.</li>
+                    <li><strong>Quick Sort:</strong> An efficient, comparison-based sort with average O(n log n) time complexity.</li>
+                    <li><strong>Heap Sort:</strong> Builds a heap and sorts in-place with O(n log n) time complexity.</li>
+                </ul>
+            </li>
+            <li><strong>Searching Algorithms:</strong> Retrieve data from collections efficiently:
+                <ul>
+                    <li><strong>Linear Search:</strong> Sequential search with O(n) time complexity, suitable for unsorted data.</li>
+                    <li><strong>Binary Search:</strong> A logarithmic search algorithm for sorted data, with O(log n) time complexity.</li>
+                    <li><strong>Hashing:</strong> Use hash functions to achieve average constant-time lookups for searches.</li>
+                    <li><strong>Trie Search:</strong> Used for prefix-based string searches with optimal time complexity for dictionaries and autocomplete features.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+    </footer>
+
+</body>
+</html>
