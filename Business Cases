@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Plan - SDG Mapping</title>
+    <style>
+        body {
+            background-color: rgb(113, 115, 141);
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        h1 {
+            text-align: center;
+            color: #f5f5f5;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #203664;
+        }
+
+        p,
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        header {
+            background: linear-gradient(90deg, #175b89, #203664);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        section {
+            background: #f8f9fa;
+            color: #0a0009;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #282c34;
+            padding: 10px 0;
+            color: #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>City Plan - Mapping Business Cases to SDGs</h1>
+        <p>Aligning Education, Technology, and Waste Management with Sustainable Development Goals</p>
+    </header>
+
+    <section>
+        <h2>1. Education Sector</h2>
+        <p>The Education Sector plays a crucial role in sustainable development by ensuring that all individuals have
+            access to quality education, which leads to better opportunities, empowerment, and overall societal
+            progress. The sector aligns with the following SDGs:</p>
+        <ul>
+            <li><strong>SDG Target 4.1:</strong> Ensure that all youth and a substantial proportion of adults, both men
+                and women, achieve literacy and numeracy. <br>This target focuses on literacy and numeracy, the
+                foundation for personal development and economic participation.</li>
+            <li><strong>SDG Indicator 4.1.1:</strong> Proportion of youth and adults who have achieved at least a
+                minimum level of proficiency in literacy and numeracy, by sex. <br>This indicator measures progress
+                towards achieving the target of universal basic education.</li>
+            <li><strong>SDG Target 4.4:</strong> Increase the number of youth and adults who have relevant skills for
+                employment, decent jobs, and entrepreneurship. <br>This target emphasizes access to skills training,
+                which is vital for economic development.</li>
+            <li><strong>SDG Indicator 4.4.1:</strong> Proportion of youth and adults with ICT skills, by sex. <br>In
+                today's world, digital literacy is essential for accessing the job market and participating in the
+                global economy.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Technological Sector</h2>
+        <p>The Technological Sector is essential for driving innovation, improving efficiency, and addressing global
+            challenges. By focusing on technological development and research, this sector contributes to building
+            sustainable infrastructure and improving overall societal welfare. The sector aligns with the following
+            SDGs:</p>
+        <ul>
+            <li><strong>SDG Target 9.5:</strong> Enhance scientific research, upgrade technological capabilities, and
+                foster innovation. <br>Technology plays a significant role in developing new solutions to global
+                challenges.</li>
+            <li><strong>SDG Indicator 9.5.1:</strong> Research and development expenditure as a proportion of GDP.
+                <br>This indicator tracks the financial investment in research and development, reflecting a nation’s
+                commitment to technological progress.</li>
+            <li><strong>SDG Target 9.4:</strong> Upgrade infrastructure and retrofitting industries to make them
+                sustainable. <br>This focuses on improving energy efficiency and adopting environmentally friendly
+                technologies in industries.</li>
+            <li><strong>SDG Indicator 9.4.1:</strong> CO2 emission per unit of value added. <br>This indicator tracks
+                industries' carbon emissions in relation to their economic output, promoting sustainability in
+                industrial practices.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Waste Management</h2>
+        <p>Effective waste management is crucial for sustainable urban development. By reducing, recycling, and properly
+            managing waste, we can reduce environmental pollution and promote cleaner, healthier cities. The Waste
+            Management sector aligns with the following SDGs:</p>
+        <ul>
+            <li><strong>SDG Target 12.4:</strong> Achieve environmentally sound management of chemicals and all waste.
+                <br>This target ensures that waste management systems prioritize environmental health and safe disposal
+                methods.</li>
+            <li><strong>SDG Indicator 12.4.2:</strong> Hazardous waste generated per capita and proportion of hazardous
+                waste treated. <br>This indicator tracks how well cities handle dangerous waste, ensuring proper
+                treatment and disposal.</li>
+            <li><strong>SDG Target 11.6:</strong> Reduce the environmental impact of cities by improving waste
+                management systems. <br>Efficient waste management systems reduce pollution, improve urban health, and
+                contribute to the overall livability of cities.</li>
+            <li><strong>SDG Indicator 11.6.2:</strong> Proportion of urban solid waste regularly collected and with
+                adequate final discharge. <br>This indicator measures how effectively waste is collected and disposed of
+                in urban areas, aiming for a clean and sustainable environment.</li>
+        </ul>
+    </section>
+
+    <footer>
+    
+    </footer>
+</body>
+
+</html>
