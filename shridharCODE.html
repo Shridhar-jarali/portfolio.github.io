@@ -1,0 +1,144 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_map>
+#include <string>
+#include <set>
+
+using namespace std;
+
+// Structure for a job
+struct Job {
+    string jobTitle;
+    vector<string> requiredSkills;
+    int experienceRequired;
+    string location;
+    string jobType;
+};
+
+// Structure for a candidate
+struct Candidate {
+    string name;
+    vector<string> skills;
+    int experience;
+    string location;
+    string preferredJobType;
+};
+
+// Function to perform BFS to find connected components
+void bfs(const vector<vector<int>>& graph, int start, vector<bool>& visited, set<int>& component) {
+    queue<int> q;
+    q.push(start);
+    visited[start] = true;
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        component.insert(node);
+
+        for (int neighbor : graph[node]) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.push(neighbor);
+            }
+        }
+    }
+}
+
+// Detect market imbalances
+void detectMarketImbalance(const vector<Job>& jobs, const vector<Candidate>& candidates) {
+    unordered_map<string, int> locationIndex, jobTypeIndex;
+    int index = 0;
+
+    // Assign indices to locations and job types
+    for (const auto& job : jobs) {
+        if (locationIndex.find(job.location) == locationIndex.end()) {
+            locationIndex[job.location] = index++;
+        }
+        if (jobTypeIndex.find(job.jobType) == jobTypeIndex.end()) {
+            jobTypeIndex[job.jobType] = index++;
+        }
+    }
+    for (const auto& candidate : candidates) {
+        if (locationIndex.find(candidate.location) == locationIndex.end()) {
+            locationIndex[candidate.location] = index++;
+        }
+        if (jobTypeIndex.find(candidate.preferredJobType) == jobTypeIndex.end()) {
+            jobTypeIndex[candidate.preferredJobType] = index++;
+        }
+    }
+
+    // Build the graph
+    vector<vector<int>> graph(index);
+    for (const auto& job : jobs) {
+        graph[locationIndex[job.location]].push_back(jobTypeIndex[job.jobType]);
+        graph[jobTypeIndex[job.jobType]].push_back(locationIndex[job.location]);
+    }
+    for (const auto& candidate : candidates) {
+        graph[locationIndex[candidate.location]].push_back(jobTypeIndex[candidate.preferredJobType]);
+        graph[jobTypeIndex[candidate.preferredJobType]].push_back(locationIndex[candidate.location]);
+    }
+
+    // Detect connected components using BFS
+    vector<bool> visited(index, false);
+    vector<set<int>> components;
+
+    for (int i = 0; i < index; i++) {
+        if (!visited[i]) {
+            set<int> component;
+            bfs(graph, i, visited, component);
+            components.push_back(component);
+        }
+    }
+
+    // Analyze each component
+    cout << "Market Imbalance Analysis:\n";
+    for (const auto& component : components) {
+        int jobCount = 0, candidateCount = 0;
+
+        for (int node : component) { 
+            for (const auto& job : jobs) {
+                if (locationIndex[job.location] == node || jobTypeIndex[job.jobType] == node) {
+                    jobCount++;
+                }
+            }
+            for (const auto& candidate : candidates) {
+                if (locationIndex[candidate.location] == node || jobTypeIndex[candidate.preferredJobType] == node) {
+                    candidateCount++;
+                }
+            }
+        }
+
+        cout << "Component with " << jobCount << " jobs and " << candidateCount << " candidates.\n";
+        if (jobCount > candidateCount) {
+            cout << "  - Job Surplus Detected!\n";
+        } else if (candidateCount > jobCount) {
+            cout << "  - Job Shortage Detected!\n";
+        } else {
+            cout << "  - Balanced Market.\n";
+        }
+    }
+}
+
+int main() {
+    // Sample jobs
+    vector<Job> jobs = {
+        {"Software Engineer", {"C++", "Python"}, 2, "New York", "Full-time"},
+        {"Data Scientist", {"Python", "Machine Learning"}, 3, "San Francisco", "Full-time"},
+        {"Financial Analyst", {"Excel", "Finance"}, 1, "New York", "Part-time"},
+        {"Backend Developer", {"Java", "Spring"}, 2, "Remote", "Full-time"}
+    };
+
+    // Sample candidates
+    vector<Candidate> candidates = {
+        {"Alice", {"C++", "Python"}, 2, "New York", "Full-time"},
+        {"Bob", {"Python", "Machine Learning"}, 3, "San Francisco", "Full-time"},
+        {"Charlie", {"Excel", "Finance"}, 1, "New York", "Part-time"},
+        {"David", {"Java", "Spring"}, 2, "Remote", "Full-time"},
+        {"Eve", {"Accounting", "Finance"}, 1, "Remote", "Part-time"}
+    };
+
+    detectMarketImbalance(jobs, candidates);
+
+    return 0;
+}
