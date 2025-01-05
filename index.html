@@ -11,7 +11,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, rgb(240, 240, 240), rgb(240, 240, 240));
+            background: linear-gradient(to bottom right, rgb(235,235,235), rgb(235,235,235));
             color: #f1f1f1;
             line-height: 1.6;
         }
@@ -21,29 +21,34 @@
         }
         h1 {
             font-size: 3rem;
-            color: #f39c12;
-            text-shadow: 2px 2px 8px rgb(200, 200, 200);
+            color: rgb(100,100,100);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
         h2 {
             font-size: 2rem;
-            color: #f1c40f;
-            background-color: rgb(200, 200, 200);
+            color: rgb(60,60,60);
+            background-color: rgba(180,180,180);
             display: inline-block;
             padding: 10px 20px;
             border-radius: 15px;
-            box-shadow: 0px 4px 12px rgb(200, 200, 200);
+            
             margin-bottom: 20px;
         }
+        h2:hover {
+    box-shadow: 0px 4px 12px rgba(140,140,140);
+}
+
         section {
             margin: 30px auto;
             padding: 40px;
-            background: rgb(200, 200, 200);
+            background: rgba(200,200,200);
             border-radius: 20px;
-            box-shadow: 0px 10px 30px rgb(200, 200, 200);
+            
             width: 90%;
             max-width: 1000px;
-            color: #ecf0f1;
+            color: rgb(60,60,60);
         }
+       
         ul, dl {
             list-style: none;
             padding: 0;
@@ -62,7 +67,7 @@
             text-decoration: none;
         }
         a:hover {
-            color: #f1c40f;
+            color: rgb(0,0,0);
             text-decoration: underline;
         }
         .btn {
@@ -71,15 +76,15 @@
             margin-top: 25px;
             font-size: 1.1rem;
             font-weight: bold;
-            color: #fff;
-            background: #e74c3c;
+            color: rgb(255,255,255);
+            background: rgb(100, 100, 100);
             border: none;
             border-radius: 15px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         .btn:hover {
-            background: #c0392b;
+            background: rgb(100, 100, 100);
             transform: scale(1.1);
         }
         .team-members {
@@ -89,10 +94,10 @@
             justify-items: center;
         }
         .team-card {
-            background: #34495e;
+            background: rgb(140,140,140);
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0px 4px 10px rgb(200, 200, 200);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
         .team-card img {
@@ -104,7 +109,7 @@
         .team-card h3 {
             margin: 10px 0;
             font-size: 1.1rem;
-            color: #f39c12;
+            color: rgb(255,255,255);
         }
         .team-card p {
             font-size: 0.9rem;
@@ -117,18 +122,29 @@
             margin-top: 20px;
         }
         .business-card {
-            background: #2c3e50;
+            background: rgb(140,140,140);
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0px 4px 10px rgb(200, 200, 200);
-            color: #ecf0f1;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            color: rgb(255,255,255);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .business-card h3 {
+        .business-card a{
+        color  : rgb(255,255,255)
+        }
+        
+        .business-card h3{
             margin-bottom: 15px;
             font-size: 1.2rem;
+            color: rgb(255,255,255)
         }
+        
+        .business-card a:hover {
+            color: rgb(0,0,0);
+            text-decoration: underline;
+        }
+       
         .business-card ul {
             list-style: none;
             padding: 0;
@@ -138,11 +154,11 @@
         }
         .business-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 6px 15px rgb(200, 200, 200);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
         }
         .chart-score h2 {
             font-size: 2.5rem;
-            color: #f39c12;
+            color: rgb(60,60,60);
         }
         .team-links {
             display: flex;
@@ -153,7 +169,7 @@
         .score-bar span {
             display: block;
             height: 8px;
-            background-color: #f1c40f;
+            background-color: rgb(140, 140, 140);
             border-radius: 4px;
         }
     </style>
@@ -183,23 +199,23 @@
     <div class="team-members">
         <div class="team-card">
             <img src="assets/sudarshan.jpg" alt="Sudarshan K. Naik">
-            <h3>Sudarshan K. Naik</h3>
-            <p>01FE23BCS221</p>
+            <h3>Ankith S K</h3>
+            <p>01FE23BCS127</p>
         </div>
         <div class="team-card">
             <img src="assets/ayush.jpg" alt="Ayush Bhandari">
-            <h3>Ayush Bhandari</h3>
-            <p>01FE23BCS173</p>
+            <h3>Shivraj K chougala</h3>
+            <p>01FE23BCS164</p>
         </div>
         <div class="team-card">
             <img src="assets/vraj.jpg" alt="Vraj Joisar">
-            <h3>Vraj Joisar</h3>
-            <p>01FE23BCS242</p>
+            <h3>Shridhar N Jarali</h3>
+            <p>01FE23BCS162</p>
         </div>
         <div class="team-card">
             <img src="assets/rohan.jpg" alt="Rohan Rathod">
-            <h3>Rohan Rathod</h3>
-            <p>01FE23BCS176</p>
+            <h3>Sharan P</h3>
+            <p>01FE23BCS027</p>
         </div>
     </div>
 </section>
@@ -208,7 +224,7 @@
     <h2>Selected Business Models</h2>
     <div class="business-cards">
         <div class="business-card">
-            <h3><a name="sudarshan">Sudarshan K Naik</a></h3>
+            <h3><a name="sudarshan">Ankith S K</a></h3>
             <ul>
                 <li>Healthcare Sector</li>
                 <li>Agricultural Sector</li>
@@ -217,14 +233,14 @@
         </div>
         
         <div class="business-card">
-            <h3><a name="vraj">Vraj Joisar</a></h3>
+            <h3><a name="vraj">Shivraj K chougala</a></h3>
             <ul>
                 <li>Industrial Sector</li>
                 <li>Transportation and Communication</li>
             </ul>
         </div>
         <div class="business-card">
-            <h3><a name="ayush">Ayush Bhandari</a></h3>
+            <h3><a name="ayush">Shridhar N Jarali</a></h3>
             <ul>
                 <li>Education Sector</li>
                 <li>Technological Sector</li>
@@ -232,7 +248,7 @@
             </ul>
         </div>
         <div class="business-card">
-            <h3><a name="rohan">Rohan Rathod</a></h3>
+            <h3><a name="rohan">Sharan P</a></h3>
             <ul>
                 <li>Wildlife Management Sector</li>
                 <li>Hospitality and Service Management</li>
@@ -245,10 +261,10 @@
     <h2>Details of Business Cases Identified</h2>
     <p>CLICK ON THE BUTTONS BELOW:</p>
     <div class="team-links">
-        <a href="pages/sudarshan.html" target="_blank" class="btn">Sudarshan K Naik</a>
-        <a href="pages/ayush.html" target="_blank" class="btn">Ayush Bhandari</a>
-        <a href="pages/vraj.html" target="_blank" class="btn">Vraj Joisar</a>
-        <a href="pages/rohan.html" target="_blank" class="btn">Rohan Rathod</a>
+        <a href="pages/sudarshan.html" target="_blank" class="btn">Ankith S K</a>
+        <a href="pages/ayush.html" target="_blank" class="btn">Shivraj K chougala</a>
+        <a href="pages/vraj.html" target="_blank" class="btn">Shridhar N Jarali</a>
+        <a href="pages/rohan.html" target="_blank" class="btn">Sharan P</a>
     </div>
 </section>
 
@@ -265,10 +281,10 @@
 <section>
     <h2>Code Implementations</h2>
     <div class="team-links">
-        <a href="pages/sudarshanCODE.html" target="_blank" class="btn">Sudarshan K Naik</a>      
-        <a href="pages/ayushKRUSKAL.html" target="_blank" class="btn">Ayush Bhandari</a>
-        <a href="pages/vrajCODE.html" target="_blank" class="btn">Vraj Joisar</a>
-        <a href="pages/rohanCODE.html" target="_blank" class="btn">Rohan Rathod</a>
+        <a href="pages/sudarshanCODE.html" target="_blank" class="btn">Ankith S K</a>      
+        <a href="pages/ayushKRUSKAL.html" target="_blank" class="btn">Shivraj K chougala</a>
+        <a href="pages/vrajCODE.html" target="_blank" class="btn">Shridhar N Jarali</a>
+        <a href="pages/rohanCODE.html" target="_blank" class="btn">Sharan P</a>
     </div>
 </section>
 
@@ -279,7 +295,7 @@
 </section>
 
 <section class="chart-score">
-    <h2>Chart Score: 9/10</h2>
+    <h2>Chart Score: -/10</h2>
     <div class="score-bar">
         <span style="width: 90%;"></span>
     </div>
