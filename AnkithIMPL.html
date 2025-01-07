@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Applications</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgb(200,200,200);
+            color: rgb(60,60,60);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(60,60,60);
+            padding: 20px;
+            background-color: rgb(140,140,140);
+            margin: 0;
+            border-bottom: 4px solid rgb(60,60,60);
+        }
+
+        h2 {
+            color: rgb(60,60,60);
+            background-color: rgb(140,140,140);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: #0056b3;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        p,
+        ul {
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        section {
+            margin: 40px auto;
+            padding: 20px;
+            background-color:rgb(180,180,180);
+            border-radius: 8px;
+            max-width: 1100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(140,140,140);
+            color: #ffffff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            p,
+            ul {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+
+            section {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Algorithm Applications</h1>
+
+    <section>
+        <h2>Job-Candidate Matching System</h2>
+        <ul>
+           
+            <li>
+                <p><strong>Algorithm</strong>: Sorting</p>
+                <p><strong>procedure</strong>
+                <ul>
+                <li>1.	Match Calculation: For each job and candidate:</li>
+                <ul>
+                <li>Calculate skill match by finding common skills.</li>
+                <li>Compare experience based on job requirements.</li>
+                <li>Compare location and job type preferences.</li>
+                <li>Calculate an overall match score using weighted criteria (skills: 40%, experience: 30%, location: 20%, job type: 10%).</li>
+                </ul>
+                <li>2.	Sorting and Output: For each job, sort candidates based on the match score and display the top 3 matches.</li>
+                
+                </ul>
+                <a href="https://github.com/Shridhar-jarali/portfolio.github.io/blob/main/AnkithCODE1.cpp">Code Implementation</a>
+            </li>
+        </ul>
+    </section>
+
+        <section>
+        <h2>Resume parsing:</h2>
+        <ul>
+           
+            <li>
+                <p><strong>Algorithm</strong>:  Text Extraction Algorithm,</p>
+                <p><strong>procedure</strong>
+                <ul>
+                <li>Read Resume: Opens a file and reads its content.</li>
+                <li>Extract Data: Uses regex to extract Name, Email, Phone, Skills, and Experience from the resume.</li>
+                <li>Match Jobs: Compares the candidate's skills with the job requirements and checks for matches.</li>
+                <li>Output: Prints extracted data and whether the candidate matches the job requirements.</li>
+                
+                </ul>
+                <a href="https://github.com/Shridhar-jarali/portfolio.github.io/blob/main/AnkithCODE2.cpp">Code Implementation</a>
+            </li>
+        </ul>
+    </section>
+
+    
+    <footer>
+    </footer>
+
+</body>
+
+</html>
