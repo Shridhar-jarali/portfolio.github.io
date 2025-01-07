@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Layout</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top left, rgb(200, 200, 200), rgb(200, 200, 200));
+            color: #000000;
+            line-height: 1.6;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgb(170, 170, 170);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color: #000000;
+            border-spacing: 0 20px;
+        }
+        caption {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid rgb(200, 200, 200);
+        }
+        th {
+            background: rgb(140, 140, 140);
+        }
+        td {
+            background: #f2f2f2;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<h2>City Layout Plan</h2>
+
+<img src="Ankith.jpg" alt="City layout">
+<img src="Ankith.jpg" alt="City layout">
+
+<section>
+        <table>
+        <caption>Area distribution:</caption>
+        <thead>
+            <tr>
+                <th>Sector</th>
+                <th>Area(km^2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Area of sea</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Agriculture</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Solar energy</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Wind energy</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Forest area</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Residential</td>
+                <td>264</td>
+            </tr>
+            <tr>
+                <td>Industrial</td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <td>Research</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>government sector</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>Central Bussiness</td>
+                <td>10.5</td>
+            </tr>
+            <tr>
+                <td>Start hub</td>
+                <td>5.8</td>
+            </tr>
+            <tr>
+                <td>Space sector</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Ports</td>
+                <td>10.5</td>
+            </tr>
+            <tr>
+                <td>Market area</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Beach</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Sports</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Health sector</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <td>City center</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Airport</td>
+                <td>3.5</td>
+            </tr>
+            <tr>
+                <td>Metro</td>
+                <td>2.6</td>
+            </tr>
+            <tr>
+                <td>Empty land</td>
+                <td>348</td>
+            </tr>
+            <tr>
+                <th>Total Area</th>
+                <th>1300</th>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<h2>Population Distribution</h2>
+<section>
+    <table>
+        <caption>Population Distribution</caption>
+        <thead>
+            <tr>
+                <th>Sector</th>
+                <th>Estimated Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Residential Area</td>
+                <td>1,200,000</td>
+            </tr>
+            <tr>
+                <td>Industrial Area</td>
+                <td>40,000</td>
+            </tr>
+            <tr>
+                <td>Education & Technology Hub</td>
+                <td>50,000</td>
+            </tr>
+            <tr>
+                <td>Healthcare Sector</td>
+                <td>5,000</td>
+            </tr>
+            <tr>
+                <td>Commercial District</td>
+                <td>415,000</td>
+            </tr>
+            <tr>
+                <td>Port Infrastructure</td>
+                <td>2,500</td>
+            </tr>
+            <tr>
+                <td>Tourism and Cultural Sites</td>
+                <td>5,000</td>
+            </tr>
+            <tr>
+                <td>Coastal Management</td>
+                <td>90,000</td>
+            </tr>
+            <tr>
+                <td>Agricultural Sector</td>
+                <td>5,000</td>
+            </tr>
+            <tr>
+                <th>Total Population</th>
+                <th>3,000,000</th>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<h2>Buget distribution</h2>
+<section>
+     <table>
+        <thead>
+            <tr>
+                <th>Sector</th>
+             
+                <th>Buget (₹ Crore)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Agriculture</td><td>1,54,532</td></tr>
+            <tr><td>Solar energy</td><td>77,266</td></tr>
+            <tr><td>Wind energy</td><td>17,170</td></tr>
+            <tr><td>Forest area</td><td>90,144</td></tr>
+            <tr><td>Residential</td><td>11,33,241</td></tr>
+            <tr><td>Industrial</td><td>2,10,336</td></tr>
+            <tr><td>Research</td><td>42,925</td></tr>
+            <tr><td>Government sector</td><td>1,20,192</td></tr>
+            <tr><td>Central Business</td><td>45,072</td></tr>
+            <tr><td>Start hub</td><td>24,896</td></tr>
+            <tr><td>Space sector</td><td>34,340</td></tr>
+            <tr><td>Ports</td><td>45,072</td></tr>
+            <tr><td>Market area</td><td>1,54,532</td></tr>
+            <tr><td>Beach</td><td>8,585</td></tr>
+            <tr><td>Education</td><td>42,925</td></tr>
+            <tr><td>Sports</td><td>38,633</td></tr>
+            <tr><td>Health sector</td><td>19,316</td></tr>
+            <tr><td>City center</td><td>2,14,629</td></tr>
+            <tr><td>Airport</td><td>15,024</td></tr>
+            <tr><td>Metro</td><td>11,160</td></tr>
+            <tr><th>Total buget</th><th>25,00,000</th></tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+</body>
+</html>
